@@ -5,7 +5,7 @@
 #                 - added purge old backups
 # v0.5 - 20140203 - easier to upgrade (all and then exclude)
 #
-# Configuration Backup for Zabbix 3.2 w/MySQL
+# Configuration Backup for Zabbix w/MySQL
 #
 # Author: Ricardo Santos (rsantos at gmail.com)
 # http://zabbixzone.com
