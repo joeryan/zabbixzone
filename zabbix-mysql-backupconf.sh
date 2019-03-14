@@ -26,12 +26,20 @@ DBUSER="zabbix"
 DBPASS=""
 DBHOST="localhost"
 
-BACKUPDIR="/u0/backups/zabbix-conf"
+if [[ -z "$1" ]]; then
+	${BACKUPDIR:="/u0/backups/zabbix-conf"}
+else
+  BACKUPDIR=$1
+fi
+
 
 # Delete old backups
 if [ -d "$BACKUPDIR" ]; then
   echo Deleting old backups
   find $BACKUPDIR -type f -mtime +200 -exec rm {} \;
+else
+  echo "Invalid directory ${BACKUPDIR} specified"
+  exit 1
 fi
 
 
